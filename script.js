@@ -1,3 +1,8 @@
+if (window.innerWidth < 1024) {
+    document.body.style.width = '1024px';
+    document.body.style.margin = '0 auto';
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
