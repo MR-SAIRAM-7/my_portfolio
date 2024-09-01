@@ -1,0 +1,182 @@
+/* General Reset */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    flex-direction: column; /* Ensure text stacks vertically */
+    justify-content: flex-start; /* Align text to the left */
+    padding: 100px 0;
+    background: linear-gradient(to right, #434343 0%, #000000 100%);
+    color: #fff;
+    background-image: url('your-image.png');
+    background-size: cover;
+    background-blend-mode: multiply;
+    text-align: left; /* Ensure text aligns to the left */
+}
+
+.hero h1, .hero p {
+    /* margin: 0; Remove default margin */
+    margin-left: 30px;
+    font-family: 'Baloo Bhai', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    /* max-width: 800px; */
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Project List Styles */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-list .project-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px; /* Limits width of each project item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .project-list .project-item {
+        width: 80%;
+    }
+}
+
+/* Skills Section Styles */
+.skills ul {
+    list-style: none;
+    text-align: center;
+}
+
+.skills ul li {
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* Contact Section Styles */
+.contact p {
+    text-align: center;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-title {
+    font-size: 28px;
+}
+
+.animated-text {
+    margin-bottom: 15px;
+}
+
+/* About Me Section Styles */
+.about-section {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.about-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.about-section .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section .about-content h3 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #d0993f;
+}
+
+.about-section .about-content p {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+}
