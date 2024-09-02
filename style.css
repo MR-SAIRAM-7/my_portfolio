@@ -173,7 +173,7 @@ section h2 {
 .line {
     background-color: #333;
     height: 20px;
-    width: 99vw;
+    width: 100%;
 }
 
 /* Skills Section Styles */
