@@ -1,11 +1,8 @@
 // Set a maximum width for small screens
 function adjustBodyWidth() {
     if (window.innerWidth < 1024) {
-        document.body.style.width = '100%'; // Full width for small screens
-        document.body.style.margin = '0 auto'; // Center align if width is less than 100%
-    } else {
-        document.body.style.width = '80%'; // A better width for larger screens
-        document.body.style.margin = '0 auto'; // Center align for larger screens
+        document.body.style.width = '1024px';
+        document.body.style.margin = '0 auto';
     }
 }
 
