@@ -47,8 +47,7 @@ nav ul li a {
     top: 0;
     background-color: #000;
     /* Black background for the navbar */
-    padding: 15px 0;
-    z-index: 1000;
+    padding: 25px 0;
     /* Keep it on top of other elements */
     transition: background-color 0.3s ease;
 }
