@@ -6,10 +6,10 @@ function adjustBodyWidth() {
     }
 }
 
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-    // Mobile device detected, redirect to desktop version
-    window.location.href = "desktop-version-url.html";
-}
+// if (/Mobi|Android/i.test(navigator.userAgent)) {
+//     // Mobile device detected, redirect to desktop version
+//     window.location.href = "desktop-version-url.html";
+// }
 
 // Run adjustBodyWidth on window resize
 window.addEventListener('resize', adjustBodyWidth);
