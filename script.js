@@ -18,30 +18,119 @@ function setupSmoothScrolling() {
     });
 }
 
-// Initialize GSAP and AOS animations
-function initializeAnimations() {
+// Initialize AOS animations
+function initializeAOS() {
+    AOS.init({
+        duration: 1000, // Animation duration
+        once: false // Repeat animations every time they come into view
+    });
+}
+
+// Initialize GSAP animations with ScrollTrigger
+function initializeGSAPAnimations() {
     gsap.registerPlugin(ScrollTrigger);
 
     // GSAP Animations
-    gsap.from(".hero h1", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
-    gsap.from(".hero p", { duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 0.5 });
+    gsap.from(".hero h1", {
+        duration: 1.5, y: -50, opacity: 0, ease: "power2.out"
+    });
+    gsap.from(".hero p", {
+        duration: 1.5, y: 50, opacity: 0, ease: "power2.out", delay: 0.5
+    });
 
     gsap.from("#about", {
-        scrollTrigger: { trigger: "#about", start: "top 80%", end: "top 30%", toggleActions: "play none none reverse" },
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%",
+            end: "top 30%",
+            toggleActions: "play none none reverse"
+        },
         duration: 1, y: 100, opacity: 0, ease: "power2.out"
     });
 
-    gsap.from(".section-title", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
-    gsap.from(".about-content h3", { duration: 1, x: -100, opacity: 0, ease: "power2.out", delay: 0.5 });
-    gsap.from(".about-content p", { duration: 1, x: 100, opacity: 0, ease: "power2.out", delay: 0.7 });
+    gsap.from(".section-title", {
+        scrollTrigger: {
+            trigger: ".section-title",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, y: -50, opacity: 0, ease: "power2.out"
+    });
 
-    gsap.from(".projects-title", { scrollTrigger: ".projects-section", duration: 1, y: -50, opacity: 0, ease: "power3.out" });
-    gsap.from(".project-item", { scrollTrigger: ".project-item", duration: 1, opacity: 0, y: 100, ease: "power3.out", stagger: 0.2 });
+    gsap.from(".about-content h3", {
+        scrollTrigger: {
+            trigger: ".about-content",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, x: -100, opacity: 0, ease: "power2.out", delay: 0.5
+    });
 
-    gsap.from(".contact-section h2", { scrollTrigger: ".contact-section", duration: 1, y: -50, opacity: 0, ease: "power3.out" });
-    gsap.from(".contact-info p", { scrollTrigger: ".contact-info", duration: 1, x: (index) => index % 2 === 0 ? -100 : 100, opacity: 0, ease: "power3.out", stagger: 0.2 });
+    gsap.from(".about-content p", {
+        scrollTrigger: {
+            trigger: ".about-content",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, x: 100, opacity: 0, ease: "power2.out", delay: 0.7
+    });
 
-    // GSAP Hover Effects for Project Items
+    gsap.from(".projects-title", {
+        scrollTrigger: {
+            trigger: ".projects-section",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, y: -50, opacity: 0, ease: "power3.out"
+    });
+
+    gsap.from(".project-item", {
+        scrollTrigger: {
+            trigger: ".project-item",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, opacity: 0, y: 100, ease: "power3.out", stagger: 0.2
+    });
+
+    gsap.from(".contact-section h2", {
+        scrollTrigger: {
+            trigger: ".contact-section",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, y: -50, opacity: 0, ease: "power3.out"
+    });
+
+    gsap.from(".contact-info p", {
+        scrollTrigger: {
+            trigger: ".contact-info",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1, x: (index) => index % 2 === 0 ? -100 : 100, opacity: 0, ease: "power3.out", stagger: 0.2
+    });
+
+    gsap.from(".part1", {
+        scrollTrigger: {
+            trigger: ".quote-section",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1.5, x: -100, opacity: 0, ease: "power3.out"
+    });
+
+    gsap.from(".part2", {
+        scrollTrigger: {
+            trigger: ".quote-section",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1.5, y: 100, opacity: 0, ease: "power3.out"
+    });
+
+    gsap.from(".part3", {
+        scrollTrigger: {
+            trigger: ".quote-section",
+            toggleActions: "play none none reverse"
+        },
+        duration: 1.5, x: 100, opacity: 0, ease: "power3.out"
+    });
+}
+
+// GSAP Hover Effects for Project Items
+function setupHoverEffects() {
     document.querySelectorAll('.project-item').forEach((item) => {
         item.addEventListener('mouseenter', () => {
             gsap.to(item, { y: -10, boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", ease: "power2.out", duration: 0.3 });
@@ -75,51 +164,12 @@ function addProjects() {
     });
 }
 
-// Initialize AOS
-function initializeAOS() {
-    AOS.init({
-        duration: 1000, // Animation duration
-        once: true // Whether animation should happen only once - while scrolling down
-    });
-}
-
 // Document ready
 document.addEventListener("DOMContentLoaded", function () {
     adjustBodyWidth();
     setupSmoothScrolling();
     initializeAOS();
-    initializeAnimations();
+    initializeGSAPAnimations();
+    setupHoverEffects();
     addProjects();
-});
-
-
-// Initialize AOS
-AOS.init();
-
-// Register the GSAP ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
-
-// Example GSAP animations with ScrollTrigger
-gsap.from(".part1", {
-    scrollTrigger: ".quote-section", // Animation triggered by scrolling
-    duration: 1.5,
-    x: -100,
-    opacity: 0,
-    ease: "power3.out"
-});
-
-gsap.from(".part2", {
-    scrollTrigger: ".quote-section",
-    duration: 1.5,
-    y: 100,
-    opacity: 0,
-    ease: "power3.out"
-});
-
-gsap.from(".part3", {
-    scrollTrigger: ".quote-section",
-    duration: 1.5,
-    x: 100,
-    opacity: 0,
-    ease: "power3.out"
 });
