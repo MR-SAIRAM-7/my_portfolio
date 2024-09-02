@@ -158,7 +158,7 @@ section h2 {
 
 .line{
     background-color: #333;
-    height: 25px;
+    height: 20px;
     width: 99vw;
 }
 
@@ -204,9 +204,9 @@ section h2 {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.skills-list li:hover {
+.skills-list li:hover { 
     transform: scale(1.1);
-    background: #f39c12; /* Highlight on hover */
+    background: #e49920; /* Highlight on hover */
     cursor: pointer;
 }
 
@@ -246,3 +246,125 @@ section h2 {
     line-height: 1.6;
     color: #fff;
 }
+
+.projects-section {
+    font-family: 'Baloo Bhai', cursive;
+    background-color: black; /* Dark background */
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.projects-section>h2{
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 2.3rem;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-item {
+    font-family: 'Baloo Bhai', cursive;
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-item h3 {
+    font-family: 'Baloo Bhai', cursive;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.project-item a:hover {
+    color: #f39c12;
+}
+
+.contact-section {
+    background-color: black;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    font-family: 'Baloo Bhai', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 1.5em;
+    font-family: 'Baloo Bhai', cursive;
+    margin: 10px 0;
+}
+
+.contact-info .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.contact-info a { 
+    font-family: 'Baloo Bhai', cursive;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #f39c12;
+}
+
+.quote-section {
+    background-color: black; /* Black background */
+    padding: 50px 0;
+    text-align: center;
+    color: #fff; /* White text */
+  }
+  
+  .quote-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .part1, .part2, .part3 {
+    font-family: 'Baloo Bhai', cursive;
+    display: inline-block;
+  }
+
+  footer p{
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color:black;
+
+}
+  

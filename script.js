@@ -22,18 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // GSAP Animations
-    gsap.from(".hero h1", { 
-        duration: 1.5, 
-        y: -50, 
-        opacity: 0, 
-        ease: "power2.out" 
+    gsap.from(".hero h1", {
+        duration: 1.5,
+        y: -50,
+        opacity: 0,
+        ease: "power2.out"
     });
-    gsap.from(".hero p", { 
-        duration: 1.5, 
-        y: 50, 
-        opacity: 0, 
-        ease: "power2.out", 
-        delay: 0.5 
+    gsap.from(".hero p", {
+        duration: 1.5,
+        y: 50,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 0.5
     });
 
     // ScrollTrigger Animation for About Section
@@ -64,25 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // GSAP Animations for About Me Section
-    gsap.from(".section-title", { 
-        duration: 1, 
-        y: -50, 
-        opacity: 0, 
-        ease: "power2.out" 
+    gsap.from(".section-title", {
+        duration: 1,
+        y: -50,
+        opacity: 0,
+        ease: "power2.out"
     });
-    gsap.from(".about-content h3", { 
-        duration: 1, 
-        x: -100, 
-        opacity: 0, 
-        ease: "power2.out", 
-        delay: 0.5 
+    gsap.from(".about-content h3", {
+        duration: 1,
+        x: -100,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 0.5
     });
-    gsap.from(".about-content p", { 
-        duration: 1, 
-        x: 100, 
-        opacity: 0, 
-        ease: "power2.out", 
-        delay: 0.7 
+    gsap.from(".about-content p", {
+        duration: 1,
+        x: 100,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 0.7
     });
 
     // Add Projects Dynamically
@@ -95,6 +95,59 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Web Dev Practice", link: "https://github.com/MR-SAIRAM-7/web_dev_practice" },
         { name: "Online Food Business", link: "https://github.com/MR-SAIRAM-7/Online_Food_buisiness" }
     ];
+
+    // ... (other code)
+
+    // GSAP animations for project items
+    gsap.from(".project-item", {
+        scrollTrigger: ".project-item",
+        duration: 1,
+        opacity: 0,
+        y: 100,
+        ease: "power3.out",
+        stagger: 0.2
+    });
+
+    // ... (other code)
+
+    // GSAP animations
+    gsap.from(".projects-title", {
+        scrollTrigger: ".projects-section",
+        duration: 1,
+        y: -50,
+        opacity: 0,
+        ease: "power3.out"
+    });
+
+    gsap.from(".project-item", {
+        scrollTrigger: ".project-item",
+        duration: 1,
+        x: (index) => index % 2 === 0 ? -100 : 100, // Alternate directions
+        opacity: 0,
+        ease: "power3.out",
+        stagger: 0.2
+    });
+
+    // ... (other code)
+
+    // GSAP animations for contact section
+    gsap.from(".contact-section h2", {
+        scrollTrigger: ".contact-section",
+        duration: 1,
+        y: -50,
+        opacity: 0,
+        ease: "power3.out"
+    });
+
+    gsap.from(".contact-info p", {
+        scrollTrigger: ".contact-info",
+        duration: 1,
+        x: (index) => index % 2 === 0 ? -100 : 100,
+        opacity: 0,
+        ease: "power3.out",
+        stagger: 0.2
+    });
+
 
     projects.forEach(project => {
         const projectItem = document.createElement('div');
@@ -131,4 +184,35 @@ document.addEventListener("DOMContentLoaded", function () {
 AOS.init({
     duration: 1000, // Animation duration
     once: true // Whether animation should happen only once - while scrolling down
+});
+
+// Initialize AOS
+AOS.init();
+
+// Register the GSAP ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Example GSAP animations with ScrollTrigger
+gsap.from(".part1", {
+  scrollTrigger: ".quote-section", // Animation triggered by scrolling
+  duration: 1.5,
+  x: -100,
+  opacity: 0,
+  ease: "power3.out"
+});
+
+gsap.from(".part2", {
+  scrollTrigger: ".quote-section",
+  duration: 1.5,
+  y: 100,
+  opacity: 0,
+  ease: "power3.out"
+});
+
+gsap.from(".part3", {
+  scrollTrigger: ".quote-section",
+  duration: 1.5,
+  x: 100,
+  opacity: 0,
+  ease: "power3.out"
 });
