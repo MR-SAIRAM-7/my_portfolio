@@ -6,10 +6,12 @@ function adjustBodyWidth() {
     }
 }
 
-// if (/Mobi|Android/i.test(navigator.userAgent)) {
-//     // Mobile device detected, redirect to desktop version
-//     window.location.href = "desktop-version-url.html";
-// }
+// JavaScript to force desktop view on mobile devices
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    // Set viewport to desktop width
+    document.querySelector("meta[name=viewport]").setAttribute('content', 'width=1024');
+}
+
 
 // Run adjustBodyWidth on window resize
 window.addEventListener('resize', adjustBodyWidth);
