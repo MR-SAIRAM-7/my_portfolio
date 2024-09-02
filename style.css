@@ -45,66 +45,79 @@ nav ul li a {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #000; /* Black background for the navbar */
+    background-color: #000;
+    /* Black background for the navbar */
     padding: 15px 0;
-    z-index: 1000; /* Keep it on top of other elements */
+    z-index: 1000;
+    /* Keep it on top of other elements */
     transition: background-color 0.3s ease;
-  }
-  
-  .navbar.scrolled {
-    background-color: #111; /* Slightly lighter black for the scrolled state */
-  }
-  
-  .nav-list {
+}
+
+.navbar.scrolled {
+    background-color: #111;
+    /* Slightly lighter black for the scrolled state */
+}
+
+.nav-list {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center items */
+    justify-content: center;
+    /* Center items */
     align-items: center;
     margin: 0;
     padding: 0;
-  }
-  
-  .nav-item {
+}
+
+.nav-item {
     margin: 0 20px;
-  }
-  
-  .nav-item a {
-    color: #fff; /* White text color */
+}
+
+.nav-item a {
+    color: #fff;
+    /* White text color */
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-  }
-  
-  .nav-item a:hover {
-    color: #f39c12; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge the text */
-  }
-  
-  .nav-item a.active {
-    color: #f39c12; /* Active link color */
-  }
-  
-  /* Add smooth scrolling to sections */
-  html {
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.nav-item a:hover {
+    color: #f39c12;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge the text */
+}
+
+.nav-item a.active {
+    color: #f39c12;
+    /* Active link color */
+}
+
+/* Add smooth scrolling to sections */
+html {
     scroll-behavior: smooth;
-  }
-  
+}
+
 
 /* Hero Section Styles */
 .hero {
     display: flex;
-    flex-direction: column; /* Ensure text stacks vertically */
-    justify-content: flex-start; /* Align text to the left */
+    flex-direction: column;
+    /* Ensure text stacks vertically */
+    justify-content: flex-start;
+    /* Align text to the left */
     padding: 100px 0;
     background: linear-gradient(to right, #434343 0%, #000000 100%);
     color: #fff;
     background-image: url('your-image.png');
     background-size: cover;
     background-blend-mode: multiply;
-    text-align: left; /* Ensure text aligns to the left */
+    text-align: left;
+    /* Ensure text aligns to the left */
 }
 
-.hero h1, .hero p {
+.hero h1,
+.hero p {
     /* margin: 0; Remove default margin */
     margin-left: 30px;
     font-family: 'Baloo Bhai', cursive;
@@ -146,7 +159,8 @@ section h2 {
     border: 1px solid #ddd;
     padding: 20px;
     width: 100%;
-    max-width: 350px; /* Limits width of each project item */
+    max-width: 350px;
+    /* Limits width of each project item */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -156,24 +170,20 @@ section h2 {
     }
 }
 
-.line{
+.line {
     background-color: #333;
     height: 20px;
     width: 99vw;
 }
 
-/* Contact Section Styles */
-.contact p {
-    text-align: center;
-}
-
-
 /* Skills Section Styles */
 .skills-section {
-    background-color: #000; /* Black background */
+    background-color: #000;
+    /* Black background */
     padding: 50px 0;
     text-align: center;
-    color: #fff; /* White text for contrast */
+    color: #fff;
+    /* White text for contrast */
 }
 
 .skills-section .section-title {
@@ -181,20 +191,25 @@ section h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     font-weight: bold;
-    color: #fff; /* Ensures title is visible */
+    color: #fff;
+    /* Ensures title is visible */
 }
 
 .skills-list {
     list-style: none;
     padding: 0;
-    display: flex; /* Use flexbox to align items in a row */
-    justify-content: center; /* Center items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to a new line */
-    gap: 20px; /* Space between items */
+    display: flex;
+    /* Use flexbox to align items in a row */
+    justify-content: center;
+    /* Center items horizontally */
+    flex-wrap: wrap;
+    /* Allow items to wrap to a new line */
+    gap: 20px;
+    /* Space between items */
 }
 
 .skills-list li {
-     font-family: 'Baloo Bhai', cursive;
+    font-family: 'Baloo Bhai', cursive;
     font-size: 1.2rem;
     margin: 10px 5px;
     padding: 10px 20px;
@@ -204,9 +219,10 @@ section h2 {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.skills-list li:hover { 
+.skills-list li:hover {
     transform: scale(1.1);
-    background: #e49920; /* Highlight on hover */
+    background: #e49920;
+    /* Highlight on hover */
     cursor: pointer;
 }
 
@@ -249,13 +265,14 @@ section h2 {
 
 .projects-section {
     font-family: 'Baloo Bhai', cursive;
-    background-color: black; /* Dark background */
+    background-color: black;
+    /* Dark background */
     padding: 50px 0;
     text-align: center;
     color: #fff;
 }
 
-.projects-section>h2{
+.projects-section>h2 {
     font-family: 'Baloo Bhai', cursive;
     font-size: 2.3rem;
 }
@@ -332,7 +349,7 @@ section h2 {
     margin-right: 10px;
 }
 
-.contact-info a { 
+.contact-info a {
     font-family: 'Baloo Bhai', cursive;
     color: #fff;
     text-decoration: none;
@@ -343,28 +360,31 @@ section h2 {
 }
 
 .quote-section {
-    background-color: black; /* Black background */
+    background-color: black;
+    /* Black background */
     padding: 50px 0;
     text-align: center;
-    color: #fff; /* White text */
-  }
-  
-  .quote-text {
+    color: #fff;
+    /* White text */
+}
+
+.quote-text {
     font-size: 1.5rem;
     line-height: 1.6;
-  }
-  
-  .part1, .part2, .part3 {
+}
+
+.part1,
+.part2,
+.part3 {
     font-family: 'Baloo Bhai', cursive;
     display: inline-block;
-  }
+}
 
-  footer p{
+footer p {
     font-family: 'Baloo Bhai', cursive;
     color: white;
     text-align: center;
     padding: 20px;
-    background-color:black;
+    background-color: black;
 
 }
-  
