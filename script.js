@@ -101,25 +101,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Example GSAP animations with ScrollTrigger
 gsap.from(".part1", {
-  scrollTrigger: ".quote-section", // Animation triggered by scrolling
-  duration: 1.5,
-  x: -100,
-  opacity: 0,
-  ease: "power3.out"
+    scrollTrigger: ".quote-section", // Animation triggered by scrolling
+    duration: 1.5,
+    x: -100,
+    opacity: 0,
+    ease: "power3.out"
 });
 
 gsap.from(".part2", {
-  scrollTrigger: ".quote-section",
-  duration: 1.5,
-  y: 100,
-  opacity: 0,
-  ease: "power3.out"
+    scrollTrigger: ".quote-section",
+    duration: 1.5,
+    y: 100,
+    opacity: 0,
+    ease: "power3.out"
 });
 
 gsap.from(".part3", {
-  scrollTrigger: ".quote-section",
-  duration: 1.5,
-  x: 100,
-  opacity: 0,
-  ease: "power3.out"
+    scrollTrigger: ".quote-section",
+    duration: 1.5,
+    x: 100,
+    opacity: 0,
+    ease: "power3.out"
 });
