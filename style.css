@@ -46,15 +46,15 @@ nav ul li a {
     width: 100%;
     top: 0;
     background-color: #000;
-    /* Black background for the navbar */
     padding: 25px 0;
-    /* Keep it on top of other elements */
     transition: background-color 0.3s ease;
+    z-index: 1000;
 }
 
 .navbar.scrolled {
     background-color: #111;
-    /* Slightly lighter black for the scrolled state */
+    background: fixed;
+    position: fixed;
 }
 
 .nav-list {
@@ -168,6 +168,97 @@ section h2 {
         width: 80%;
     }
 }
+
+/* Experience Section Styles */
+.experience-section {
+    background-color: #000; /* Dark background to match the existing sections */
+    padding: 50px 20px; /* Similar padding to the other sections */
+    color: #fff; /* White text color */
+    text-align: center;
+}
+
+
+.experience-section h2{
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 2.4em;
+}
+
+.experience-title {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color:white; /* Highlighted color for the title */
+}
+
+.experience-list {
+    display: flex;
+   
+    align-items: center;
+    gap: 30px;
+}
+
+.experience-item {
+    font-family: 'Baloo Bhai', cursive;
+    cursor: pointer;
+    background-color: #222; /* Dark background for individual items */
+    border: 1px solid #333;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; /* Limit the max-width to keep it aligned with other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text to the left within the experience item */
+}
+
+.experience-item {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.experience-item:hover {
+    transform: scale(1.05); /* Scale the element slightly on hover */
+}
+
+.experience-item h3 {
+    font-family: 'Baloo Bhai', cursive;
+    color:white;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.experience-item h4 a {
+    color: #f39c12; /* Make the link stand out */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.experience-item h4 a:hover {
+    cursor: pointer;
+    color: #e67e22; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+    scale: 1.05;
+}
+
+
+.experience-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query to ensure responsiveness */
+@media only screen and (max-width: 768px) {
+    .experience-item {
+        width: 90%;
+    }
+}
+
 
 .line {
     background-color: #333;

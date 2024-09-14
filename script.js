@@ -101,6 +101,35 @@ function initializeGSAPAnimations() {
         duration: 1, opacity: 0, y: 100, ease: "power3.out", stagger: 0.2
     });
 
+    // GSAP and jQuery Animations for Experience Section
+    function initializeExperienceAnimations() {
+        gsap.from(".experience-title", {
+            scrollTrigger: {
+                trigger: ".experience-section",
+                toggleActions: "play none none reverse"
+            },
+            duration: 1, y: -50, opacity: 0, ease: "power3.out"
+        });
+
+        gsap.from(".experience-item", {
+            scrollTrigger: {
+                trigger: ".experience-item",
+                toggleActions: "play none none reverse"
+            },
+            duration: 1, opacity: 0, y: 100, ease: "power3.out", stagger: 0.2
+        });
+
+        // jQuery hover effects
+        $('.experience-item').hover(
+            function () {
+                $(this).animate({ top: "-10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)" }, 300);
+            },
+            function () {
+                $(this).animate({ top: "0px", boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)" }, 300);
+            }
+        );
+    }
+
     gsap.from(".contact-section h2", {
         scrollTrigger: {
             trigger: ".contact-section",
@@ -177,7 +206,25 @@ function addProjects() {
     });
 }
 
-// Document ready
+$(document).ready(function() {
+    // Fade in experience items on scroll
+    $(window).scroll(function() {
+        $('.experience-item').each(function() {
+            var position = $(this).offset().top;
+            var windowHeight = $(window).scrollTop() + $(window).height();
+            
+            if (position < windowHeight) {
+                $(this).addClass('fadeInUp');
+            }
+        });
+    });
+
+    // Trigger scroll event initially to show items in view
+    $(window).trigger('scroll');
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     adjustBodyWidth();
     setupSmoothScrolling();
@@ -185,4 +232,5 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeGSAPAnimations();
     setupHoverEffects();
     addProjects();
+    initializeExperienceAnimations(); // Add Experience Section Animations
 });
