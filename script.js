@@ -6,6 +6,25 @@ function adjustBodyWidth() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const welcomeNote = document.getElementById('welcome-note');
+    const pageContent = document.getElementById('page-content');
+    
+    // Simulate loading delay (for the animation)
+    setTimeout(() => {
+        // Fade out the welcome note
+        welcomeNote.style.opacity = '0';
+        
+        // After fade-out completes, remove the welcome note and show the page content
+        setTimeout(() => {
+            welcomeNote.style.display = 'none';
+            pageContent.style.display = 'block'; // Show content
+            pageContent.style.opacity = '1'; // Fade in the content
+        }, 1000); // Wait for the fade-out transition to complete (1s)
+        
+    }, 1500); // Show the welcome note for 3 seconds before transitioning
+});
+
 // JavaScript to force desktop view on mobile devices
 if (/Mobi|Android/i.test(navigator.userAgent)) {
     // Set viewport to desktop width
