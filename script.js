@@ -243,13 +243,26 @@ $(document).ready(function() {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    adjustBodyWidth();
-    setupSmoothScrolling();
-    initializeAOS();
-    initializeGSAPAnimations();
-    setupHoverEffects();
-    addProjects();
-    initializeExperienceAnimations(); // Add Experience Section Animations
+    setTimeout(() => {
+        adjustBodyWidth();
+        setupSmoothScrolling();
+        initializeAOS();
+        initializeGSAPAnimations();
+        setupHoverEffects();
+        addProjects();
+        initializeExperienceAnimations(); // Add Experience Section Animations
+    }, 1500); // 2 second delay
 });
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     adjustBodyWidth();
+//     setupSmoothScrolling();
+//     initializeAOS();
+//     initializeGSAPAnimations();
+//     setupHoverEffects();
+//     addProjects();
+//     initializeExperienceAnimations(); // Add Experience Section Animations
+// });
